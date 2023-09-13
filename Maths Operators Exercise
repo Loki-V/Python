@@ -1,0 +1,56 @@
+MyFloatValue = 9.82
+print(type(MyFloatValue))
+MyStringValue = str(MyFloatValue)
+print(type(MyStringValue))
+MyIntegerValue = int(MyFloatValue)
+print(type(MyIntegerValue))
+print("\n")
+
+textValue = 'hello_world'
+print(type(textValue))
+numberText = int(textValue)
+print(type(numberText))
+ 
+#ValueError
+
+year = int(input("Enter the current year"))
+age = int(input("What age will you be at the end of this year?")) # Note the int() cast on the input
+print("You were born in", year-age)
+
+
+print("2000"+18)
+#Will not work as "2000" is an integer and 18 is a string file, these two files cannot be added together.
+print("\n")
+
+
+mars_bar=float(1)
+coke_can=float(1.50)
+crisps=float(.80)
+teacup=float(2)
+slice_pan=float(3.50)
+
+mars_bar=float(mars_bar*5)
+coke_can=float(coke_can*4)
+crisps=float(crisps*3)
+teacup=float(teacup*2)
+
+bill=mars_bar+coke_can+crisps+teacup+slice_pan
+
+print(bill)
+
+
+number1=int(input("Enter first number:"))
+number2=int(input("Enter second number:"))
+sum=number1+number2
+print(f"{number1}+{number2}={sum}")
+
+
+F=float(input("Enter a temperature in degrees farenheit:"))
+c = float((F-32) * (5/9))
+print(round(c,2))
+
+
+yy=int(input("Enter in a year"))
+mm=int(input("Enter in a month as a number"))
+dd=int(input("Enter in a day"))
+w=(dd+[13(mm+1)/5]+y+[y/4]+[c/4]-2c) mod 7
