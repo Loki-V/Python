@@ -1,0 +1,42 @@
+year=int(input("Enter in the year:"))
+mm=int(input("Enter in the month as a number:"))
+dd=int(input("Enter in the day:"))
+
+
+if mm==1:
+    mm=mm+12
+    year=year-1
+if mm==2:
+    mm=mm+12
+    year=year-1
+
+c = year // 100
+y = year % 100
+
+print(dd,mm,c,y)
+
+equation1=((mm+1)*13)//5
+equation2=y//4
+equation3=c//4
+equation4=c*2
+
+w=dd+equation1+y+equation2+equation3-equation4
+w=w%7
+
+print(w)
+
+if w==0:
+    print("Saturday")
+if w==1:
+    print("Sunday")
+if w==2:
+    print("Monday")
+if w==3:
+    print("Tuesday")
+if w==4:
+    print("Wednesday")
+if w==5:
+    print("Thursday")
+if w==6:
+    print("Friday")
+
