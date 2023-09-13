@@ -1,0 +1,68 @@
+
+name = input("Name:")
+name2= input("Surname:")
+print("Hello", name, name2)
+
+print("What do you call a bear with no teeth?\nA Gummy bear!")
+
+number = input("Please give me a number:")
+number2 = input("Please give me another number:")
+number = int(number)
+number2 = int(number2)
+total = number + number2
+print(f"The total is: {total}")
+
+Number = int(input("Can you give me another Number?\n"))
+Number2 = int(input("Can you give me another Number?\n"))
+Number3 = int(input("Can you give me another Number?\n"))
+
+add = Number + Number2
+add = int(add)
+Total = add * Number3
+print(f"So I added the first number you gave me with the second and multiplied it with the third. Your answer is: {Total}.")
+
+pizza_slice = int(input("How many pizza slices did you start with?\n"))
+pizza_slice = int(pizza_slice)
+left_over = int(input("How many do you have left over?\n"))
+pizza_eaten = pizza_slice - left_over
+
+if pizza_eaten == pizza_slice:
+    print(f"Damn, aren't you a greedy boi?")
+else:
+    print(f"Did you eat {pizza_eaten} slices?")
+print("\n")
+
+name = input("what is your name?\n")
+birthday = (int(input("How old are you?\n")))
+nextBirthday = birthday + 1
+print(f"Next birthday you will be {nextBirthday}.")
+print("\n")
+
+bill = int(input("Imagine you're working at a restaurant and you have a bill, how expensive is the bill?\n€"))
+diners = int(input("Now, how many diners are there?\n"))
+average = bill / diners
+print(f"so, from the numbers you just gave me, each diner must pay an average of €{average}.")
+print("\n")
+
+days = int(input("Give me a random number of days:"))
+hours = days * 24
+int(hours)
+minutes = hours * 60
+int(minutes)
+seconds = minutes * 60
+int(seconds)
+print(f"So in the number of days you gave me ({days}) there are {hours} hours, or {minutes} minutes, or {seconds} seconds in those days.")
+
+
+kilograms = float(input("I want you to enter in a random weight in Kilograms. (Kg)\n\n"))
+pounds = kilograms * 2.204
+print(f"So, when I convert your {kilograms}Kg into pounds I get {pounds}pounds.\n\n")
+
+
+bigNumber = int(input("Give me a number over 100:"))
+print("\n")
+smallNumber = int(input("Now give me a number under 10:"))
+
+result = bigNumber * smallNumber
+print(f"The number {smallNumber} goes into {bigNumber} {result} times.")
+
