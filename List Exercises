@@ -1,3 +1,32 @@
+sport=["Hockey","Table Tennis"]
+favsport=input("What is your favourite sport? ")
+sport.append(favsport)
+print(sport)
+
+subject=["Irish","English","Maths","Biology","Geography","Computer Science"]
+print("Which of these is your least favourite subject?",subject,"Enter it exactly as you see here")
+badsubject=input()
+subject.remove(badsubject)
+print(subject)
+
+
+colour=["Red","Orange","Yellow,""Green","Blue","Indigo","Violet","Black","White","Gray"]
+startnum=int(input("\n Enter in a number between 0 and 4:"))
+endnum=int(input("\n Enter in a number between 5 and 9:"))
+print(colour[startnum:endnum])
+
+num=[123,100,666,420]
+usernum=int(input("\nEnter in a three digit number:"))
+if usernum==123:
+    print("0")
+if usernum==100:
+    print("1")
+if usernum==666:
+    print("2")
+if usernum==420:
+    print("3")
+else:
+    print("That is not in the list\n")
 
 party=[]
 for i in range(1,4):
