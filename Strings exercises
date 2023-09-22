@@ -1,0 +1,36 @@
+
+name=input('Enter in your first name in lowercase.\n')
+surname=input('Enter in your surname in lowercase.\n')
+name=name+' '+surname
+
+name_upper=name.upper()
+print(name_upper)
+
+rhyme=input('Give me the first line of a nursery rhyme.\n')
+print(len(rhyme),'\n')
+
+num1=int(input(f'Give me a number from 0 to {len(rhyme)-1}:'))
+num2=int(input(f'Give me a number from 0 to {len(rhyme)} that is bigger than the first number.\n'))
+
+print(rhyme[num1:num2])
+
+
+word=input('Give me a random word.\n')
+print(word.upper())
+
+name=input('\nGive me your first name.\n')
+if len(name) < 5:
+    surname=input('Give me your surname.\n')
+    name=name+surname
+    print(name.upper())
+else:
+    print(name.lower())
+
+vowel=['a','e','i','o','u']
+word=input('\n\nGive me a word.\n')
+if word[0] in vowel:
+    print(word+'way')
+else:
+    piglatin=word.replace(word[0],'')
+    print(piglatin+word[0]+'ay')
+
