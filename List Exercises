@@ -45,11 +45,11 @@ if "no" == yesno:
     party.remove(name)
 print(party)
 
-print('Here are some TV programmes')
+print('\n\n\n\nHere are some TV programmes')
 programmes=['The Avengers,','Breaking Bad','Nat Geo','Boss Baby']
 print(programmes)
 
-newshow=input('Enter in your favoutite show?\n')
+newshow=input('\n\nEnter in your favoutite show.\n')
 newshowloc=int(input('Where in the list should it be loceated? 1-5:'))
 programmes.insert(newshowloc,newshow)
 print('\n',programmes)
