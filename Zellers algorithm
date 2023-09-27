@@ -27,16 +27,17 @@ print(w)
 
 if w==0:
     print("Saturday")
-if w==1:
+elif w==1:
     print("Sunday")
-if w==2:
+elif w==2:
     print("Monday")
-if w==3:
+elif w==3:
     print("Tuesday")
-if w==4:
+elif w==4:
     print("Wednesday")
-if w==5:
+elif w==5:
     print("Thursday")
-if w==6:
+elif w==6:
     print("Friday")
-
+else:
+    print('Error')
