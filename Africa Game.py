@@ -11,6 +11,7 @@ print(f'Score={score}')
 while len(countries) >0 and lives >0:
     print(f'Number of countries to guess:{len(countries)}\nScore={score}\nLives Left:{lives}\n\n')
     country=str(input('Enter in the name of an African country you have not named already.\n'))
+    country=country.lower()
     country=country.title()
     if country in countries:
         time.sleep(.5)
@@ -27,3 +28,7 @@ if lives==0:
     print(f'Game Over\n\nYou missed these countries:',*countries, sep='\n')
 else:
     print('\nWell Done! You have Completed the Game!')
+
+
+
+
