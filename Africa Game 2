@@ -28,5 +28,3 @@ while len(countries) > 0:
     countries.remove(c)
 
 print('\nWell Done! You have Completed the Game!', f'Your score is:{score}')
-
-
