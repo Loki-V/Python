@@ -1,5 +1,4 @@
 message=input('Enter in the code you want to decipher.\n')
-message=str(message)
 message=message.upper()
 
 message=message.replace('D','a')
