@@ -1,19 +1,21 @@
 #Caesar's Cipher
 code=input('Do you want to encode or decode a message?\n')
-if 'encode' not in code:
-    if 'decode' not in code:
-        print("ERROR\nerror_code: 69 Can't Read")
-        exit()
-message=input(f'Enter in the code you want to {code}.\n')
-key=int(input('Key:')) 
+while ('encode' not in code) and ('decode' not in code):
+    print("ERROR\nerror_code: 69 Can't Read")
+    code = input('Do you want to encode or decode a message?\n')
+        
+message = input(f'Enter in the code you want to {code}.\n')
+key = int(input('Key:')) 
 
 if 'encode' in code:
     for i in message:
         if i.isalpha():
-            c=ord(i)+key
-            if c>ord('z') or c>ord('Z') and c<ord('a'):
+            c = ord(i)+key
+            if c > ord('z') or c>ord('Z') and c<ord('a'):
                 c-=26
             print(chr(c),end='')
+        else:
+            print(chr(ord(i)),end='')
 
 if 'decode' in code:
     for i in message:
@@ -22,3 +24,5 @@ if 'decode' in code:
             if c<ord('a') and c>ord('Z') or c<ord('A'):
                 c+=26
             print(chr(c),end='')
+        else:
+            print(chr(ord(i)),end='')
