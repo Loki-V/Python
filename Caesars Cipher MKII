@@ -1,0 +1,37 @@
+#Caesar's Cipher
+
+code = input('Do you want to encode or decode a message?\n')
+while ('encode' not in code) and ('decode' not in code):
+    print("ERROR\nerror_code: 69 Can't Read")
+    code = input('Do you want to encode or decode a message?\n')
+        
+message = input(f'Enter in the code you want to {code}.\n')
+
+if 'encode' in code:
+    key=int(input('Enter in the key:'))
+    for i in message:
+        if i.isalpha():
+            if i.isupper():
+                ascii_shift = 64
+            else:
+                ascii_shift = 96
+            c = ord(i) - ascii_shift
+            c = (c + key) % 26
+            c += ascii_shift
+            print(chr(c),end='')
+        else:
+            print(chr(ord(i)),end='')
+key = 0
+while True:
+    key += 1
+    for i in message:
+        if i.isalpha() is False:
+            print(i, end = '')
+            continue
+        c = ord(i)-key
+        if (c < ord('a') and c > ord('Z')) or c < ord('A'):
+            c += 26
+        print(chr(c), end='')
+    answer = input(f"\nkey={key}|is it correct? (y)")
+    if answer == "y":
+        exit()
