@@ -12,26 +12,31 @@ if 'encode' in code:
     for i in message:
         if i.isalpha():
             if i.isupper():
-                ascii_shift = 64
+                ascii_shift = 65
             else:
-                ascii_shift = 96
+                ascii_shift = 97
             c = ord(i) - ascii_shift
             c = (c + key) % 26
             c += ascii_shift
             print(chr(c),end='')
         else:
             print(chr(ord(i)),end='')
+    exit()
 key = 0
 while True:
     key += 1
     for i in message:
-        if i.isalpha() is False:
-            print(i, end = '')
-            continue
-        c = ord(i)-key
-        if (c < ord('a') and c > ord('Z')) or c < ord('A'):
-            c += 26
-        print(chr(c), end='')
-    answer = input(f"\nkey={key}|is it correct? (y)")
+        if i.isalpha():
+            if i.isupper():
+                ascii_shift = 65
+            else:
+                ascii_shift = 97
+            c = ord(i) - ascii_shift
+            c = (c - key) % 26
+            c += ascii_shift
+            print(chr(c),end='')
+        else:
+            print(chr(ord(i)),end='')
+    answer = input(f"\nkey={key}\nIs it correct? (y)\n")
     if answer == "y":
         exit()
