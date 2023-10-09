@@ -39,4 +39,4 @@ while True:
             print(chr(ord(i)),end='')
     answer = input(f"\nkey={key}\nIs it correct? (y)\n")
     if answer == "y":
-        exit()
+print('Message decoded succsessfully.')
