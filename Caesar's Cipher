@@ -6,15 +6,15 @@ while ('encode' not in code) and ('decode' not in code):
     code = input('Do you want to encode or decode a message?\n')
         
 message = input(f'Enter in the code you want to {code}.\n')
-key = int(input('Key:')) 
+key = int(input('Key:'))
 
 if 'encode' in code:
     for i in message:
         if i.isalpha():
             if i.isupper(): # I love supper
-                ascii_shift = 64
+                ascii_shift = 65
             else:
-                ascii_shift = 96
+                ascii_shift = 97
             c = ord(i) - ascii_shift
             c = (c + key) % 26
             c += ascii_shift
@@ -24,10 +24,14 @@ if 'encode' in code:
     exit()
 
 for i in message:
-    if i.isalpha():
-        c=ord(i)-key
-        if c<ord('a') and (c>ord('Z') or c<ord('A')):
-            c+=26
-        print(chr(c),end='')
-    else:
-        print(chr(ord(i)),end='')
+        if i.isalpha():
+            if i.isupper():
+                ascii_shift = 65
+            else:
+                ascii_shift = 97
+            c = ord(i) - ascii_shift
+            c = (c - key) % 26
+            c += ascii_shift
+            print(chr(c),end='')
+        else:
+            print(chr(ord(i)),end='')
