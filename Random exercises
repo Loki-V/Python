@@ -1,0 +1,87 @@
+import random
+
+#Challenge 52
+print('Challenge 52')
+
+mynum = random.randrange(1,101)
+print(mynum)
+
+#Challenge 53
+print('Challenge 53')
+
+fruit = random.choice(['Apple','Blueberry','Pear','Mango','Watermelon'])
+print(fruit)
+
+#Challenge 54
+print('Challenge 54')
+
+coin = random.choice(['h','t'])
+choice = input('I will flip a coin, chose either heads(h) or tails(t).\n')
+if choice != coin:
+    print(f'Bad Luck. You got {coin}')
+else:
+    print('You Win!')
+
+#Challenge 55
+print('Challenge 55')
+
+num = random.randrange(1,6)
+choice = int(input('Enter a random number between 1 and 5 including 5.\n'))
+if choice > num:
+    print('Too high')
+else:
+    print('Too low')
+choice = int(input('Enter a random number between 1 and 5 including 5.\n'))
+if num == choice:
+    print('Correct')
+else:
+    print(f'You lose, the number was {num}')
+
+#Challenge 56+57
+print('Challenge 56+57')
+
+num = random.randrange(1,11)
+choice = int(input('Enter a number between 1 and 10 including 10\n'))
+
+while choice != num:
+    if choice > num:
+        print('Too High')
+    else:
+        print('Too low')
+    choice = int(input('Enter a number between 1 and 10 including 10\n'))
+print('Correct')
+
+#Challenge 58
+print('Challenge 58')
+
+score=0
+for i in range(0,5):
+    num1 = random.randint(0,101)
+    num2 = random.randint(0,101)
+    ans = num1+num2
+    qans = int(input(f'Answer this question: {num1}+{num2}='))
+    if qans == ans:
+        score+=1
+print(f'You have finished this maths quiz!\nYou got {score} out of 5 questions correct.')
+
+#Challenge 59
+print('Challenge 59')
+
+colour = ['red','green','black','blue','purple']
+ran = random.choice(colour)
+choice = input(f'You have to choose between one of these 5 colours:\n {colour}\n')
+choice=choice.lower()
+while choice != ran:
+    if ran=='red':
+        print('I bet you are RED with frustration')
+    elif ran=='blue':
+        print('You are probably feeling BLUE right now')
+    elif ran=='green':
+        print('I bet you are GREEn with envy')
+    elif ran=='black':
+        print('The chances of you getting this correct are looking very BLACK')
+    elif ran=='purple':
+        print('Your face looks a little PURPLE')
+    choice = input(f'You have to choose between one of these 5 colours:\n {colour}\n')
+    choice=choice.lower()
+print('Finally, you got it right!')
