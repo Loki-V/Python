@@ -1,0 +1,162 @@
+import turtle
+import random
+import time
+scr = turtle.Screen()
+turtle.shape('turtle')
+colour = ['red','blue','green','yellow', 'pink', 'black']
+
+
+
+#Challenge 60
+print('Challenge 60')
+
+for i in range(0,4):
+    turtle.forward(90)
+    turtle.right(90)
+turtle.hideturtle()
+turtle.clearscreen()
+time.sleep(2)
+#Challenge 61
+print('Challenge 61')
+
+for i in range(0,3):
+    turtle.forward(90)
+    turtle.left(120)
+turtle.hideturtle()
+turtle.clearscreen()
+time.sleep(2)
+
+#Challenge 62
+print('Challenge 62')
+
+for i in range(0,720):
+    turtle.forward(.5)
+    turtle.left(.5)
+turtle.hideturtle()
+turtle.clearscreen()
+time.sleep(2)
+
+#Challenge 63
+print('Challenge 63')
+
+turtle.begin_fill()
+turtle.color('black','red')
+for i in range(0,4):
+    turtle.left(90)
+    turtle.forward(90)
+turtle.end_fill()
+turtle.penup()
+turtle.forward(180)
+turtle.pendown()
+
+turtle.begin_fill()
+turtle.color('black','blue')
+for i in range(0,4):
+    turtle.left(90)
+    turtle.forward(90)
+turtle.end_fill()
+turtle.penup()
+turtle.forward(180)
+turtle.pendown()
+
+turtle.begin_fill()
+turtle.color('black','green')
+for i in range(0,4):
+    turtle.left(90)
+    turtle.forward(90)
+turtle.end_fill()
+
+turtle.hideturtle()
+turtle.clearscreen()
+ 
+time.sleep(2)
+#Challenge 65
+print('Challenge 65')
+
+
+turtle.left(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.penup()
+turtle.hideturtle()
+turtle.forward(90)
+turtle.pendown()
+turtle.showturtle()
+
+turtle.forward(90)
+turtle.right(90)
+turtle.forward(50)
+turtle.right(90)
+turtle.forward(90)
+turtle.left(90)
+turtle.forward(50)
+turtle.left(90)
+turtle.forward(90)
+
+turtle.penup()
+turtle.hideturtle()
+turtle.forward(90)
+turtle.pendown()
+turtle.showturtle()
+
+turtle.forward(90)
+turtle.left(90)
+turtle.forward(50)
+turtle.left(90)
+turtle.forward(60)
+turtle.backward(60)
+turtle.right(90)
+turtle.forward(50)
+turtle.left(90)
+turtle.forward(90)
+
+turtle.hideturtle()
+turtle.clearscreen()
+ 
+
+time.sleep(2)
+#Challenge 64
+print('Challenge 64')
+
+turtle.left(288)
+for i in range(0,5):
+    turtle.forward(100)
+    turtle.left(216)
+turtle.hideturtle()
+turtle.clearscreen()
+ 
+time.sleep(2)
+#Challenge 66
+print('Challenge 66')
+
+for i in range(0,8):
+    turtle.color(random.choice(colour))
+    turtle.forward(100)
+    turtle.left(45)
+    
+turtle.hideturtle()
+turtle.clearscreen()
+ 
+time.sleep(2)
+#Challenge 67
+print('Challenge 67')
+
+for i in range(0,10):
+    turtle.left(39)
+    for i in range(0,8):
+        turtle.forward(100)
+        turtle.left(45)
+turtle.hideturtle()
+turtle.clearscreen()
+time.sleep(2)
+#Challenge 67
+print('Challenge 67')
+
+for i in range(0,random.randint(0,1000)):
+    turtle.left(random.randint(0,360))
+    turtle.forward(random.randint(0,1000))
+    turtle.right(random.randint(0,360))
+    turtle.forward(random.randint(0,1000))
+    
+turtle.hideturtle()
+turtle.exitonclick()
