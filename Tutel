@@ -153,10 +153,12 @@ time.sleep(2)
 print('Challenge 67')
 
 for i in range(0,random.randint(0,1000)):
-    turtle.left(random.randint(0,360))
-    turtle.forward(random.randint(0,1000))
-    turtle.right(random.randint(0,360))
-    turtle.forward(random.randint(0,1000))
-    
+    _ = random.randint(0,3)
+    if _ == 0:
+        turtle.forward(random.randint(0,1000))
+    elif _ == 1:
+        turtle.left(random.randint(0,1000))
+    elif _ == 2:
+        turtle.right(random.randint(0,1000))
 turtle.hideturtle()
 turtle.exitonclick()
