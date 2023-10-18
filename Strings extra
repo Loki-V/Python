@@ -1,0 +1,77 @@
+
+#Challenge 80
+print('Challenge 80')
+
+name, surname = input('Enter your first name and second name.\n').split()
+print(f'The length of your surname is {len(surname)} letters.')
+print(name,surname)
+print(f'The length of your full name (including space) is {len(name) + len(surname)} characters.\n')
+
+#Challenge 81
+print('Challenge 81')
+
+subject = input('What is your favourite subject?\n')
+for i in subject:
+    print(i,end= '-')
+
+#Challenge 82
+print('Challenge 82\n')
+
+poem = ('There was an Old Man in a tree,\nWho was horribly bored by a bee.\nWhen they said, "Does it buzz?"\nHe replied, "Yes, it does!\nIts a regular brute of a bee.')
+print(poem)
+start = int(input('Choose a starting point.\n'))
+end = int(input('Choose an ending point.\n'))
+print(poem[start:end])
+
+#Challenge 83
+print('Challenge 83')
+
+word = input('Type in a word in uppercase.\n')
+while word != word.upper():
+    print('Try again')
+    word = input('Type in a word in UPPERCASE.\n')
+print('Thank you.')
+
+#Challenge 84
+print('Challenge 84')
+
+Pc = input('Enter in your postcode.\n')
+print(Pc[0:2].upper())
+
+#Challenge 85
+print('Challenge 85')
+
+vowelcount=0
+name = input('Enter your name.\n')
+vowel = ['A','E','I','O','U','a','e','i','o','u']
+for i in name:
+    if i in vowel:
+        vowelcount += 1
+print(f'There are {vowelcount} vowels in your name.\n')
+
+#Challenge 86
+print('Challenge 86')
+
+password = input('Enter in a password\n')
+print('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+password2 = input('Enter your password again\n')
+while password != password2:
+    if password.lower() == password2.lower():
+        print('They must be in the same case.')
+    else:
+        print('Incorrect')
+    password2 = input('Enter your password again\n')
+print('Thank you')
+
+#Challenge 87
+print('Challenge 87')
+
+word = input('Type a word.\n')
+wordlen = len(word)
+for i in range(wordlen):
+    if i == 0:
+        pass
+    else:
+        i = i * -1
+        print(word[i])
+print(word[0])
