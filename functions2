@@ -1,0 +1,13 @@
+import myLibrary
+
+num1 = int(input("Input a number:"))
+num2 = int(input("Input a second number:"))
+num3 = int(input("Input a third number:"))
+
+program = int(input("Choose a program:\n\nProgram 1\nProgram 2\nProgram 3\n\nEnter the number of the program you wish to choose(1,2 or 3):"))
+if program == 1:
+    print(myLibrary.sub1(num1,num2,num3))
+elif program == 2:
+    print(myLibrary.sub2(num1,num2,num3))
+else:
+    print(myLibrary.sub3(num1,num2,num3))
