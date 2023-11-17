@@ -1,0 +1,109 @@
+"""
+#1
+def listsum(list):
+    ans = 0
+    for i in list:
+        ans += int(i)
+  mplelist = [8,2,3,0,7]
+print(listsum(samplelist))
+
+#2
+
+def listmultiply(list):
+    ans = 1
+    for i in list:
+        ans *= int(i)
+    return ans
+
+samplelist = [8,2,3,-1,7]
+print(listmultiply(samplelist))
+
+
+#3
+
+def reverse(string):
+    result = []
+    y=0
+    for i in string:
+        x = (len(string)*-1)+y
+        y+=1
+        result += string[x]
+    result = str(result)
+    result = result.replace(",","")
+    result = result.replace("'","")
+    result = result.replace(" ","")
+    result = result.replace("[","")
+    result = result.replace("]","")
+    return result
+    
+
+string = "1234abcd"
+print(reverse(string))
+
+#4
+
+def factorial(num):
+    result = 1
+    ans = []
+    for i in range (1,x+1):
+        ans += str(i)
+    for i in ans:
+        
+        result *= int(i)
+    return result
+
+x = int(input('Enter a number:'))
+print(factorial(x))
+"""  return ans
+    
+samplelist = [8,2,3,0,7]
+print(listsum(samplelist))
+
+#2
+
+def listmultiply(list):
+    ans = 1
+    for i in list:
+        ans *= int(i)
+    return ans
+
+samplelist = [8,2,3,-1,7]
+print(listmultiply(samplelist))
+
+
+#3
+
+def reverse(string):
+    result = []
+    y=0
+    for i in string:
+        x = (len(string)*-1)+y
+        y+=1
+        result += string[x]
+    result = str(result)
+    result = result.replace(",","")
+    result = result.replace("'","")
+    result = result.replace(" ","")
+    result = result.replace("[","")
+    result = result.replace("]","")
+    return result
+    
+
+string = "1234abcd"
+print(reverse(string))
+
+#4
+
+def factorial(num):
+    result = 1
+    ans = []
+    for i in range (1,x+1):
+        ans += str(i)
+    for i in ans:
+        
+        result *= int(i)
+    return result
+
+x = int(input('Enter a number:'))
+print(factorial(x))
+"""
