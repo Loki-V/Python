@@ -1,4 +1,4 @@
-"""
+
 #1
 def listsum(list):
     ans = 0
@@ -59,51 +59,76 @@ print(factorial(x))
 samplelist = [8,2,3,0,7]
 print(listsum(samplelist))
 
-#2
+#5
 
-def listmultiply(list):
-    ans = 1
+def fall():
+    for i in range (0,3):
+        x = int(input("Guess a number:"))
+        if x >= 1 and x < 6:
+            print('True')
+        else:
+            print('False')
+
+
+print(fall())
+
+#6
+def lttrcnt(list):
+    alpha = 0
+    num = 0
     for i in list:
-        ans *= int(i)
+        if i.isupper() is True:
+            alpha += 1
+        elif i.islower() is True:
+            num += 1
+    response = (f"No. of Upper case characters:{alpha}\nNo. of Lower case characters:{num}")
+    return response
+
+
+input = input("Give me a sentece.\n")
+print(lttrcnt(input))
+
+#7
+def function7(_):
+    ans = []
+    for i in range(0,len(_)):
+        if _[i] in ans:
+            continue  
+        else: 
+            ans.append(_[i])  
     return ans
 
-samplelist = [8,2,3,-1,7]
-print(listmultiply(samplelist))
+samplelist = [1,2,3,3,3,3,4,5]
+print(function8(samplelist))
+
+#8
+
+def function8(num):
+    if num > 1:
+        for i in range(2,num):
+            if num % i == 0:
+                response = (f"{num} is not a prime number.")
+                break
+            else:
+                response = (f"{num} is a prime number.")
+                break
+    else:
+        response = (f"{num} is not a prime number.")
+    return response
+
+number = int(input("Enter a number:"))
+print(function8(number))
 
 
-#3
+#9
 
-def reverse(string):
-    result = []
-    y=0
-    for i in string:
-        x = (len(string)*-1)+y
-        y+=1
-        result += string[x]
-    result = str(result)
-    result = result.replace(",","")
-    result = result.replace("'","")
-    result = result.replace(" ","")
-    result = result.replace("[","")
-    result = result.replace("]","")
-    return result
-    
-
-string = "1234abcd"
-print(reverse(string))
-
-#4
-
-def factorial(num):
-    result = 1
+def function9(num):
     ans = []
-    for i in range (1,x+1):
-        ans += str(i)
-    for i in ans:
-        
-        result *= int(i)
-    return result
+    for i in range(0,len(num)):
+        if (i % 2) != 0:
+            ans.append(num[i])
+    return ans
 
-x = int(input('Enter a number:'))
-print(factorial(x))
-"""
+SampleList= [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(function9(SampleList))
+
