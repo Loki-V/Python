@@ -1,0 +1,49 @@
+
+f = open('C:/Users/20LWehder.ACC/Documents/Python/files/remainder.txt', 'r')
+
+for line in 'remainder.txt':
+    print(f.readline())
+    
+f.close()
+
+f = open('C:/Users/20LWehder.ACC/Documents/Python/files/courses.csv','r')
+
+count = 0
+for line in f:
+    line = line[:-1]
+    fields = line.split(',')
+    if fields[0] == 'CS':
+        print(fields[0],fields[1])
+        count +=1
+f.close()
+
+school_results = open('C:/Users/20LWehder.ACC/Documents/Python/files/results.csv','r')
+
+UL = 0
+DCU = 0
+TCD = 0
+count = 0
+for line in school_results:
+    line = line[:-1]
+    fields = line.split(',')
+    if 'UL' in line:
+        UL += 1
+    elif 'DCU' in line:
+        DCU += 1
+    elif 'TCD' in line:
+        TCD += 1
+
+print("There are 3 schools in all.")
+print(f"UL has {UL} result(s).\nDCU has {DCU} result(s).\nTCD has {TCD} result(s).")
+
+
+
+
+
+
+
+
+
+
+
+
