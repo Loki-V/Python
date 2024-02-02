@@ -1,5 +1,5 @@
 #binary/decimal converter functions
-
+import hexadecimalletterconversion
 
 def BD(binary):
     x = 1
@@ -7,7 +7,7 @@ def BD(binary):
     for i in str(binary)[::-1]:
         y+= int(i)*x
         x = x*2
-    print(f"Your Binary number is: {y}") 
+    return y
 
 
 def DB(decimal):
@@ -26,7 +26,7 @@ def DB(decimal):
     ans = ans.replace(' ','')
     ans = ans.replace('[','')
     ans = ans.replace(']','')
-    print(f"The decimal number {decimal} is {ans} in binary.")
+    return(ans)
     
 def add(binary1,binary2):
        
@@ -80,6 +80,41 @@ def add(binary1,binary2):
     ans = ans.replace(' ','')
     ans = ans.replace('[','')
     ans = ans.replace(']','')
-    print(ans) 
+    print(ans)
+    
+def hexatobinary(hex):
+    hexa = list(hex[::-1])
+    ans = 0
 
+    for i in range(0,len(hex)):
+        if hex[i].isalpha:
+            x = hexadecimalletterconversion.letter(hexa[i])
+            del hexa[i]
+            hexa.insert(i,x)
+        _ = pow(16,i)
+        y = int(x) * _
+        ans += y
+    return(ans)
 
+def bintohex(dec):
+    x = int(dec)
+    hex = []
+
+    while True:
+        r = x % 16
+        x = x // 16
+        if r > 9:
+            r = hexadecimalletterconversion.number(r)
+            hex.insert(0,r)
+        else:
+            hex.insert(0,r)
+        if x == 0:
+            break
+    ans = str(hex)
+    ans = ans.replace(',','')
+    ans = ans.replace(' ','')
+    ans = ans.replace('[','')
+    ans = ans.replace(']','')
+    ans = ans.replace("'",'')
+        
+    return (ans)
