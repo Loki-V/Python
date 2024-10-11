@@ -1,11 +1,19 @@
-#ID 1 = Loki   Pass: something
-#ID 2 = bla    Pass: not something
+#User Account Program
 
-space = ','
-FirstLine = (f"User ID{space}Password\n")
+FirstLine = (f"User ID, Password\n")
 Psswd = open("C:/Users/20LWehder.ACC/Documents/Library/AccountData.csv",'r')
 
-Menu = int(input("1)  Create a new user ID\n2)  Change a password\n3)  Display all user IDs\n4)  Quit\n"))
+def AddPass():
+    while True:
+        print("\nPassword must include each of the following:\n1. It should have at least 8 characters\n2. It should include upper case and lower case letters\n3. It should include numbers\n4. It should include one of these special characters; !, £, $, €, &, %, *, #\n")
+        Password = input("Enter your password: ")
+        CheckPassword = input("Enter your password again: ")
+        if Password != CheckPassword or PassCheck(Password) == False:
+            print("\nPlease re-enter your password, enure your password follows guidelines.\n")
+        else:
+            break
+    return Password
+
 
 def changeFileMode(file, mode) :
     file.close()
@@ -13,17 +21,20 @@ def changeFileMode(file, mode) :
     return file
 
 def PassCheck(Pass):
-    for i in Pass:
-        if i.isdigit() is True:
-            return True
-        elif i == '!' or i == '£' or i == '$' or i == '€' or i == '&' or i == '%' or i == '*' or i == '#':
-            return True
-    if len(Pass) < 8:
-        return False
-    elif Pass.isupper() == True or Pass.islower() == True:
-        return False
+    symbol = ['!','£','$','€','&','*','#']
+    check = False
+    if len(Pass) >= 8:
+        check = True
     else:
-        return True
+        check = False
+    if Pass.isupper() == True or Pass.islower() == True:
+        check = True
+    else:
+        check = False
+    for i in Pass:
+        if Pass.isdigit() == False and i in symbol:
+            check = True
+    return check
     
 
 def AddID():
@@ -32,25 +43,42 @@ def AddID():
         NewID = input("\nInput new ID here: ")
         check = True
         for i in Psswd:
-            line = i.split(space)
+            line = i.split(',')
             if NewID not in line:
                 check = False
             else:
                 check = True
         if check == False:
             Psswd = changeFileMode(Psswd, 'a')
-            while True:
-                print("Password must include each of the following:\n1. It should have at least 8 characters\n2. It should include upper case and lower case letters\n3. It should include numbers\n4. It should include one of these special characters; !, £, $, €, &, %, *, #\n")
-                NewPass = input("Enter your password: ")
-                CheckPass = input("Enter your password again: ")
-                if NewPass == CheckPass and PassCheck(NewPass) == True:
-                    break
-            Psswd.write(f"{NewID}{space}{NewPass}\n")
+            Psswd.write(f"{NewID}, {AddPass()}\n")
             Psswd.close()
             break
         else:
             print("ID already exists, be more creative next time.")
-            Psswd.close()
+        Psswd.close()
+
+def CheckID():
+    while True:
+        Psswd = open("C:/Users/20LWehder.ACC/Documents/Library/AccountData.csv",'r')
+        ID = input("\nInput your ID here: ")
+        for i in Psswd:
+            line = i.split(',')
+            if ID in line[0]:
+                del line[1]
+                line.append(AddPass())
+                Psswd.close()
+                return ("Password changed successfully")
+                
+            else:
+                continue
+        print("\nID does not exist, make sure you enter the correct one.")
+        
+def IDPrint():
+    Psswd = open("C:/Users/20LWehder.ACC/Documents/Library/AccountData.csv",'r')
+    for i in Psswd:
+        line = i.split(',')
+        print(line[0])
+    Psswd.close()
 
 
 
@@ -60,7 +88,18 @@ if FirstLine not in Psswd:
     Psswd.close()
 
 
-AddID()
+while True:
+    Menu = int(input("\n\n\n1)  Create a new user ID\n2)  Change a password\n3)  Display all user IDs\n4)  Quit\n"))
+    match Menu:
+        case 1:
+            AddID()
+            print("\nID added successfully\n\n\n\n")
+        case 2:
+            print(CheckID())
+        case 3:
+            IDPrint()
+        case 4:
+            Psswd.close()
+            print("\nClosing\n")
+            exit()
 
-
-Psswd.close()
